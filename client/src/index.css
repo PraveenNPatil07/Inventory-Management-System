@@ -71,3 +71,126 @@
 .status-message.error {
     color: red; /* Override for error messages */
 }
+
+/* General body styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f7f6;
+}
+
+/* Styles for the auth forms container */
+.auth-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    background-color: #fff;
+}
+
+.auth-container h2.auth-title { /* Added .auth-title to h2 selector */
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Styling for the form itself */
+.auth-form { /* Added for form container */
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Creates spacing between inputs */
+}
+
+/* Styling for each form group (label + input) */
+.form-group { /* This class is NOT used in the provided Login.js, but kept for consistency if you add labels */
+    margin-bottom: 15px;
+}
+
+.form-group label { /* This selector is NOT used in the provided Login.js */
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+/* Styling for input fields */
+.form-input { /* For email and password inputs */
+    width: calc(100% - 22px); /* Account for padding + border */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+/* Style for input fields with validation errors (if you add client-side validation) */
+.form-input.input-error {
+    border-color: #ff4d4f; /* Red border for errors */
+}
+
+/* Style for validation error messages (if you add client-side validation) */
+.error-message {
+    color: #ff4d4f; /* Red text for errors */
+    font-size: 14px;
+    margin-top: 5px;
+    display: block;
+}
+
+/* Button styling */
+.auth-button { /* For the Sign In button */
+    width: 100%;
+    padding: 10px;
+    background-color: #4a5568; /* A darker gray, similar to Tailwind's slate-700 */
+    color: white;
+    border: none;
+    border-radius: 8px; /* Rounded corners */
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 10px;
+    text-transform: uppercase; /* Uppercase text */
+    opacity: 1; /* Default opacity */
+    transition: opacity 0.2s ease-in-out; /* Smooth transition */
+}
+
+.auth-button:hover {
+    opacity: 0.95; /* Slightly less opaque on hover */
+}
+
+.auth-button:disabled {
+    opacity: 0.8; /* More transparent when disabled */
+    cursor: not-allowed;
+}
+
+/* Styles for the "Don't have an account?" text and link */
+.auth-links-container { /* Replaced flex gap-2 mt-5 */
+    display: flex;
+    gap: 8px; /* Small gap between text and link */
+    margin-top: 20px;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+.auth-links-container p {
+    margin: 0; /* Remove default paragraph margin */
+    font-size: 14px;
+    color: #555;
+}
+
+.auth-link { /* For the "Sign Up" link */
+    color: #007bff; /* Blue color */
+    text-decoration: none; /* No underline by default */
+    font-size: 14px;
+}
+
+.auth-link:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Style for error messages displayed after form submission */
+.auth-error-message { /* For the p tag displaying `error` state */
+    color: red; /* Red text for errors */
+    font-size: 14px;
+    margin-top: 20px;
+    text-align: center;
+}
