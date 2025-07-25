@@ -15,7 +15,7 @@ const MONGO_URI = process.env.MONGO_URI;
 app.use(express.json()); // Body parser for JSON data
 app.use(cookieParser()); // Use cookie-parser middleware
 app.use(cors({
-    origin: 'http://localhost:3000', // Your React app's URL
+    origin: 'http://localhost:3001', // Your React app's URL
     credentials: true // Crucial for sending/receiving cookies
 }));
 
