@@ -79,7 +79,7 @@ function Register() {
 
         try {
             // API Endpoint: http://localhost:5000/api/auth/signup
-            const res = await axios.post('http://localhost:3000/client/auth/signup', {
+            const res = await axios.post('http://localhost:3000/server/auth/signup', {
                 username,
                 email,
                 password // Only send username, email, password for signup

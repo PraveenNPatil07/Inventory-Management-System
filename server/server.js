@@ -7,6 +7,7 @@ const cookieParser = require('cookie-parser');
 const bcrypt = require('bcryptjs');
 
 const authRouter = require('./routes/auth.route');
+const prodRouter   = require('./routes/product.route')
 const User = require('./models/user.model'); // ✅ Use correct path
 
 const app = express();
@@ -56,7 +57,9 @@ mongoose.connect(MONGO_URI)
   .catch(err => console.error('❌ MongoDB connection error:', err));
 
 // Routes
-app.use('/client/auth', authRouter);
+app.use('/server/auth', authRouter);
+app.use('/server/product', prodRouter);
+
 
 app.get('/', (req, res) => {
   res.send('API is running...');

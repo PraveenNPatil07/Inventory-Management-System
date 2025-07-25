@@ -36,7 +36,7 @@ export default function Login() {
 
         try {
             // Use axios for the API call, crucial for cookie handling withCredentials
-            const res = await axios.post('http://localhost:3000/client/auth/signin', formData, {
+            const res = await axios.post('http://localhost:3000/server/auth/signin', formData, {
                 withCredentials: true // This ensures cookies are sent and received
             });
 
